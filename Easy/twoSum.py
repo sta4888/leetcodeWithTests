@@ -16,3 +16,13 @@ class Solution(object):
 
         return []
 
+
+# Популярное решение
+class SolutionPopular:
+    def two_sum(self, nums, target):
+        m = {}
+        for i, x in enumerate(nums):
+            y = target - x
+            if y in m:
+                return [m[y], i]
+            m[x] = i

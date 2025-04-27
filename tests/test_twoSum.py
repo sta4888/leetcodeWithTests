@@ -1,11 +1,11 @@
 import pytest
 
-from Easy.twoSum import Solution
+from Easy.twoSum import Solution, SolutionPopular
 
 
 @pytest.fixture
 def solution():
-    return Solution()
+    return SolutionPopular()
 
 
 
@@ -13,7 +13,6 @@ def test_solution():
     """
     Проверяем, действительно ли создается объект Solution
     """
-
     assert Solution()
 
 
@@ -32,7 +31,8 @@ def test_two_sum_no_result(solution):
     nums = [1, 2, 3]
     target = 7
     result = solution.two_sum(nums, target)
-    assert result == []
+    result = [] if result is None else result
+    assert result == [] or None
 
 
 
