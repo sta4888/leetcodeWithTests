@@ -1,5 +1,3 @@
-from pickle import FALSE
-
 import pytest
 
 from Easy.palindrome_number import Solution
